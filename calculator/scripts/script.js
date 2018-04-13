@@ -9,11 +9,11 @@ document.addEventListener("DOMContentLoaded",function(){
 
   calcNumbers.forEach(function(button){
     button.addEventListener("click", function(){
-      if (screen.value === "" || parseInt(screen.value, 10)){
-        screen.value += button.innerText;
+      if (screen.innerText === "" || parseInt(screen.innerText, 10)){
+        screen.innerText += button.innerText;
       }else{
-        screen.value = "";
-        screen.value += button.innerText;
+        screen.innerText = "";
+        screen.innerText += button.innerText;
       }
       operations += button.innerText;
     });
@@ -21,18 +21,18 @@ document.addEventListener("DOMContentLoaded",function(){
 
   calcOperators.forEach(function(button){
     button.addEventListener("click", function(){
-      screen.value = button.innerText;
+      screen.innerText = button.innerText;
       operations += button.innerText;
     });
   });
 
   clear.addEventListener('click', function(){
-    screen.value = "";
+    screen.innerText = "";
     operations = "";
   });
 
   equal.addEventListener("click", function(){
-    screen.value = (eval(operations));
+    screen.innerText = (eval(operations));
     operations = "";
   });
 });
