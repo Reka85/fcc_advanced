@@ -8,8 +8,8 @@
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
       <!--jquery ui-->
       <link rel="stylesheet" href="stylesheets/style.css">
-      <!--google fonts-->
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <link href="https://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet">
+      <script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js" integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+" crossorigin="anonymous"></script>
       <title>Javascript Calculator</title>
   </head>
   <body>
@@ -20,32 +20,32 @@
           <p id ="screen-value"></p>
         </div>
 
-        <table id = "keyboard">
-          <tr>
-            <td class="num">1</td>
-            <td class="num">2</td>
-            <td class="num">3</td>
-            <td id="clear">C</td>
-          </tr>
-          <tr>
-            <td class="num">4</td>
-            <td class="num">5</td>
-            <td class="num">6</td>
-            <td class="operator">+</td>
-          </tr>
-          <tr>
-            <td class="num">7</td>
-            <td class="num">8</td>
-            <td class="num">9</td>
-            <td class="operator">-</td>
-          </tr>
-          <tr>
-            <td class="num">0</td>
-            <td class="operator">/</td>
-            <td class="operator">*</td>
-            <td id="equal">=</td>
-          </tr>
-        </table>
+        <div id = "keyboard">
+
+            <div class="num">1</div>
+            <div class="num">2</div>
+            <div class="num">3</div>
+            <div class="del" id="bspace"><i class="fas fa-arrow-left"></i></div>
+
+            <div class="num">4</div>
+            <div class="num">5</div>
+            <div class="num">6</div>
+            <div class="del" id="clear">C</div>
+
+
+            <div class="num">7</div>
+            <div class="num">8</div>
+            <div class="num">9</div>
+            <div data-op ="incr" class="operator">+</div>
+            <div data-op="decr" class="operator">-</div>
+
+            <div id="point" class="num">.</div>
+            <div class="num">0</div>
+            <div data-op="division" class="operator">/</div>
+            <div data-op="multiplication" class="operator">*</div>
+            <div id="equal">=</div>
+
+        </div>
       </div>
     </div>
     <script type="text/javascript" src="scripts/script.js"></script>
