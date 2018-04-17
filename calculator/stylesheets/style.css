@@ -57,15 +57,7 @@ span{
   padding-top: 6px;
 }
 
-.num{
-  width:20%;
-}
-
-.operator{
-  width:20%;
-}
-
-#equal{
+.num, .operator, #point, #equal{
   width:20%;
 }
 

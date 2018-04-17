@@ -2,11 +2,13 @@ document.addEventListener("DOMContentLoaded",function(){
   const screen = document.getElementById("screen-value");
   screen.value = "";
   const calcNumbers = document.querySelectorAll(".num");
-  const calcOperators = document.querySelectorAll(".operator")
+  const calcOperators = document.querySelectorAll(".operator");
   const clear = document.getElementById("clear");
+  const bspace = document.getElementById("bspace");
   const equal = document.getElementById("equal");
   const operators = {"incr": "+", "decr": "-", "division": "/", "multiplication": "*"};
-  const numbers = [0,1,2,3,4,5,6,7,8,9]
+  const numbers = [0,1,2,3,4,5,6,7,8,9];
+  const point = document.getElementById("point");
   let operations = new String();
 
   calcNumbers.forEach(function(button){
@@ -15,7 +17,7 @@ document.addEventListener("DOMContentLoaded",function(){
         screen.innerText = "";
         equal.classList.remove("active");
       }// fcc utolso feladat
-      else if (screen.innerText === "" || screen.innerText === parseInt(screen.innerText, 10).toString()){
+      else if (screen.innerText === "" || screen.innerText === parseInt(screen.innerText, 10).toString() || screen.innerText.slice(-1) === "."){
         //pass
       }else{
         screen.innerText = "";
@@ -41,6 +43,20 @@ document.addEventListener("DOMContentLoaded",function(){
     screen.innerText = (eval(operations)); // see eval
     operations = "";
     equal.classList.add("active");
+  });
+
+  bspace.addEventListener("click", function(){
+    if (screen.innerText !== ""){
+      screen.innerText = screen.innerText.slice(0, -1);
+      operations = operations.slice(0, -1);
+    }
+  });
+
+  point.addEventListener("click", function(){
+    if (screen.innerText === parseInt(screen.innerText, 10).toString()){
+      screen.innerText += ".";
+      operations += ".";
+    }
   });
 });
 
