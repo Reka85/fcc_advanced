@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+  <html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+      <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
+      <!--jquery ui-->
+      <link rel="stylesheet" href="stylesheets/style.css">
+      <!--google fonts-->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <title>Pomodoro Clock</title>
+  </head>
+  <body>
+    <div class="container">
+      <div>
+        <span class="decrease" id ="pause-decrease">-</span><span id="pause"></span><span class="increase" id="pause-increase">+</span>
+      </div>
+      <div>
+        <span class="decrease" id="time-decrease">-</span><span id="time"></span><span class="increase" id="time-increase">+</span>
+      </div>
+      <div class="clock">
+        <span id="minutes-left"></span>:<span id="seconds-left"></span>
+      </div>
+    </div>
+    <script src="scripts/script.js"></script>
+  </body>
+</html>
