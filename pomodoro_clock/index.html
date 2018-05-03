@@ -1,37 +1,45 @@
 <!DOCTYPE html>
   <html lang="en">
   <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta http-equiv="X-UA-Compatible" content="ie=edge">
-      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-      <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
-      <!--jquery ui-->
-      <link rel="stylesheet" href="stylesheets/style.css">
-      <!--google fonts-->
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-      <title>Pomodoro Clock</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
+    <link rel="stylesheet" href="stylesheets/style.css">
+    <!--google fonts-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Pomodoro Clock</title>
   </head>
   <body>
+    <!-- <audio
+      id="sound" src="http://developer.mozilla.org/@api/deki/files/2926/=AudioTest_(1).ogg"
+      autoplay type="audio">
+      Your browser does not support the <code>audio</code> element.
+    </audio> -->
     <div class="container">
-      <div>
-        <span class="decrease" id ="pause-decrease">-</span>
-        <span id="pause" class="time-unit"></span>
-        <span class="increase" id="pause-increase">+</span>
+      <div class="set">
+        <div>
+          <p>Break time</p>
+          <span class="buttons" id ="pause-decrease">-</span>
+          <span id="pause" class="time-unit">5</span>
+          <span class="buttons" id="pause-increase">+</span>
+        </div>
+        <div>
+          <p>Work time</p>
+          <span class="buttons" id="time-decrease">-</span>
+          <span id="time" class="time-unit">5</span>
+          <span class="buttons" id="time-increase">+</span>
+        </div>
       </div>
-      <div>
-        <span class="decrease" id="time-decrease">-</span>
-        <span id="time" class="time-unit"></span>
-        <span class="increase" id="time-increase">+</span>
+      <div id="time-type">
+        <p></p>
       </div>
       <div id="clock">
         <span id="minutes-left" class="time-unit"></span>:<span id="seconds-left" class="time-unit"></span>
       </div>
-      <div id="break">
-        <p>Break!</p>
-        <span id="break-minutes-left" class="time-unit"></span>:<span id="break-seconds-left" class="time-unit"></span>
-      </div>
-      <button id="start-button">Start</button>
+      <button class="buttons" id="start-button">Start</button>
+      <button class="buttons" id="reset-button">Reset</button>
     </div>
     <script src="scripts/script.js"></script>
   </body>

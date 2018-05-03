@@ -1,14 +1,48 @@
 span{
-  width:10px;
+
   margin-right: 5px;
-  border: 1px solid black;
+
 }
 
 body{
   color:green;
 }
 
+.container{
+  margin-top: 10vh;
+  text-align: center;
+  /*border: 1px solid grey;*/
+}
+
+.set{
+  display: flex;
+  justify-content: space-around;
+}
+
+.set div{
+  padding: 10px 16px;
+  /*border: 1px solid green;
+  border-radius: 40px;*/
+}
+
+.buttons{
+  padding: 8px 12px;
+  border: 1px solid green;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+#clock{
+  margin:20px 0;
+
+}
+
+
 #break{
+  display: none;
+}
+
+#reset-button{
   display: none;
 }
 
