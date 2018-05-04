@@ -42,15 +42,16 @@ document.addEventListener("DOMContentLoaded", function(){
   });
 
   let reseted=false
+
   startButton.addEventListener("click", function(){
     addZeroIfOneDigit(setSession, minutesLeft);
     addZeroIfOneDigit(seconds, secondsLeft);
     reseted = false;
     countDown(setSession,setPause, minutesLeft, secondsLeft);
   });
+
   resetButton.addEventListener("click", function(){
     reseted=true;
-
     addZeroIfOneDigit(setSession, minutesLeft);
     addZeroIfOneDigit(seconds, secondsLeft);
     buttons.map((elem) => (elem.style.display = "inline"));
@@ -66,28 +67,29 @@ document.addEventListener("DOMContentLoaded", function(){
     pause--;
     buttons.map((elem) => (elem.style.display = "none"));
     resetButton.style.display = "inline";
-    const counter = setInterval(timer, 500);
+    const counter = setInterval(timer, 400);
 
     document.getElementById("time-type").innerHTML = "<p>Session time left:</p>"
 
     function timer(){
+      console.log(mins, secs);
       if (reseted){
         clearInterval(counter);
       }
       else if (mins === 0 && secs === 0){
         //ping!
         clearInterval(counter);
-        var breakStart = setInterval(breakTimer, 500);
+        var breakStart = setInterval(breakTimer, 400);
         addZeroIfOneDigit(mins, minField);
         addZeroIfOneDigit(secs % 60, secField);
       }
       else if (mins >= 0){
         secs--;
+        addZeroIfOneDigit(mins, minField);
+        addZeroIfOneDigit(secs % 60, secField);
         if (secs % 60 === 0 && mins !== 0){
           mins--;
         }
-        addZeroIfOneDigit(mins, minField);
-        addZeroIfOneDigit(secs % 60, secField);
       }
 
       function breakTimer(){
