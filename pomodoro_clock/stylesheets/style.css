@@ -63,5 +63,11 @@ p{
 
 :not(#title-text){
   font-family: 'Lato', sans-serif;
-};
+}
+
+@media screen and (max-width: 330px){
+  .time-unit{
+    margin: 0 6px;
+  }
+}
 
