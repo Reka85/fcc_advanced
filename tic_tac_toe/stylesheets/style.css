@@ -11,6 +11,10 @@
   display: none;
 }
 
+#rematch{
+  display: none;
+}
+
 .board-row{
   display: block;
 }
