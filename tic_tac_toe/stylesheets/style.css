@@ -1,0 +1,23 @@
+
+.mark-choice{
+  padding: 4px;
+  border: 1px solid grey;
+  background-color: #eaeaea;
+  cursor: pointer;
+  border-radius: 2px;
+}
+
+#board{
+  display: none;
+}
+
+.board-row{
+  display: block;
+}
+
+.board-row button{
+  width: 30px;
+  height: 30px;
+  border: 1px solid #eaeaea;*/
+  cursor: pointer;
+}
