@@ -1,27 +1,82 @@
+body{
+  background-color: rgb(71, 76, 84);
+  font-family: 'Roboto', sans-serif;
+}
+
+button{
+  background-color: rgba(200,200,200,0.4);
+}
+
+h2{
+  color: rgb(20,200,200);
+  text-shadow: 2px 1px rgba(20,200,200,0.4)
+}
+
+.main{
+  /*border: 1px solid green;*/
+  background-color: rgb(102, 102, 102);
+  border-radius: 6px;
+  margin: 0 auto;
+  margin-top: 14vh;
+  min-height: 70vh;
+  padding: 12px 0 40px 0;
+  text-align: center;
+  width: 80%;
+}
 
 .mark-choice{
-  padding: 4px;
-  border: 1px solid grey;
   background-color: #eaeaea;
+}
+.mark-choice, #rematch{
+  border: 1px solid grey;
+  border-radius: 3px;
   cursor: pointer;
-  border-radius: 2px;
+  padding: 4px 8px;
 }
 
 #board{
   display: none;
+  margin-bottom: 20px;
+  font-size: 1.5em;
 }
 
 #rematch{
-  display: none;
+  visibility: hidden;
+  margin: auto;
+  padding: 0.8em 0;
+  width: 8em;
+  color: rgb(230,230,230);
+}
+
+#info {
+  height: 4em;
+  margin-top: 8vh;
+  /*border: 1px solid green;*/
+}
+
+#info p, #info div{
+  vertical-align: middle;
 }
 
 .board-row{
   display: block;
+  margin-bottom: 5px;
 }
 
 .board-row button{
-  width: 30px;
-  height: 30px;
-  border: 1px solid #eaeaea;*/
+  border: none;/*1px solid #eaeaea;*/
   cursor: pointer;
+  height: 2.5em;
+  vertical-align: top;
+  width: 2.5em;
+  color: rgb(234, 231, 35);
+  font-size: 1.4em;
+}
+
+@media screen and (max-width: 350px){
+  .main{
+    width:100%;
+    /*margin: 0;*/
+    padding: 12px 0;
+  }
 }
