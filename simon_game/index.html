@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+  <html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+      <!--jquery-->
+      <!--jquery ui-->
+      <link rel="stylesheet" href="stylesheets/style.css">
+      <!--google fonts-->
+      <!--font awesome-->
+      <title>Simon Game</title>
+  </head>
+  <body>
+    <div class="container text-center">
+      <div id="title">
+        <h1>Simon game</h1>
+      </div>
+      <div id="buttons">
+        <button id="start-button">Start</button>
+        <p>Count: <span id=count>--</span></p>
+      </div>
+      <div id="circles">
+        <div class="circle" data-index="0" id="blue"></div>
+        <div class="circle" data-index="1" id="red"></div>
+        <div class="circle" data-index="2" id="yellow"></div>
+        <div class="circle" data-index="3" id="green"></div>
+      </div>
+    </div>
+    <script type="text/javascript" src="scripts/script.js"></script>
+  </body>
+</html>

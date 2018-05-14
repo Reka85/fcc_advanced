@@ -1,0 +1,43 @@
+.container{
+  margin-top: 12vh;
+}
+
+#buttons{
+  display: flex;
+  justify-content: space-around;
+  margin: 10vh 0 6vh 0;
+}
+
+#start-button{
+  border: 1px solid grey;
+  padding: 10px 16px;
+  border-radius: 3px;
+}
+
+#circles{
+  display: flex;
+  justify-content: space-around;
+}
+
+
+.circle{
+  width: 50px;
+  height: 50px;
+  border-radius: 25px;
+}
+
+#red{
+  background-color: rgb(221, 46, 46);
+}
+
+#green{
+  background-color: rgb(72, 221, 46);
+}
+
+#blue{
+  background-color: rgb(54, 113, 209);
+}
+
+#yellow{
+  background-color: rgb(231, 234, 37);
+}
