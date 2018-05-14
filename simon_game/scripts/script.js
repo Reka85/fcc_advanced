@@ -1,25 +1,42 @@
 document.addEventListener("DOMContentLoaded", function(){
   const arr = [0,1,2,3];
-  const startButton = document.getElementById("start-button");
 
-  let chosenNumber;
+  let chosenNumbers = [];
+  let userNumbers = [];
+
+  const startButton = document.getElementById("start-button");
   startButton.addEventListener("click", getRandomIndex);
+
+  function getRandomIndex(){
+    chosenNumbers.push(arr[Math.floor(Math.random() * arr.length)]);
+    console.log(chosenNumbers);
+    return chosenNumbers;
+  }
 
   const circles = Array.from(document.getElementsByClassName("circle"));
   circles.map(circle => {
-    circle.addEventListener("click", isCorrect);
+    circle.addEventListener("click", addToUserNumbers);
   });
 
-  function getRandomIndex(){
-    chosenNumber = arr[Math.floor(Math.random() * arr.length)];
-    console.log(chosenNumber);
-    return chosenNumber;
+  function addToUserNumbers(e){
+    userNumbers.push(parseInt(e.target.getAttribute("data-index"), 10));
+    console.log(userNumbers)
+    isCorrect(userNumbers, chosenNumbers)
   }
 
-  function isCorrect(e){
-    const indexOfClicked = parseInt(e.target.getAttribute("data-index"), 10);
-    if (indexOfClicked === chosenNumber){
-      console.log("Yuppy");
+  function isCorrect(arr1, arr2){
+    for(let i = 0; i < arr1.length; i++) {
+      if(arr2[i] !== arr1[i]){
+        console.log("sg wrong")
+        return false;
+      }
     }
+    if (arr1.length === arr2.length){
+      console.log("ok")
+      userNumbers = [];
+      getRandomIndex();
+    }
+    return true;
   }
+
 });
