@@ -4,17 +4,15 @@ document.addEventListener("DOMContentLoaded", function(){
   let userNumbers = [];
   const circles = Array.from(document.getElementsByClassName("circle"));
 
-  // set up checkbox
+  // setting up checkbox
   const checkbox = document.getElementById("choose-strict");
 
   let strict = checkbox.checked;
 
-  console.log(strict);
-
   checkbox.addEventListener("change", toggleStrict);
+
   function toggleStrict(){
     strict = !strict;
-    console.log(strict);
   }
 
   //setting up buttons
@@ -42,7 +40,24 @@ document.addEventListener("DOMContentLoaded", function(){
     chosenNumbers.push(arr[Math.floor(Math.random() * arr.length)]);
     count.textContent++;
     console.log(chosenNumbers);
+    showChosenButtons();
     return chosenNumbers;
+  }
+
+  //showing the buttons chosen by the computer
+  function showChosenButtons(){
+    let i = 0;
+    const buttons = setInterval(function(){
+      showButton(chosenNumbers[i]);
+      i++;
+      if (i >= chosenNumbers.length){
+        clearInterval(buttons);
+      }
+    },1500)
+  }
+
+  function showButton(field){
+    console.log(field);
   }
 
   //user has to click on button that has the corresponding index
@@ -63,6 +78,7 @@ document.addEventListener("DOMContentLoaded", function(){
         } else {
           console.log("sg wrong"),
           console.log(`the correct order: ${arr2}`)
+          showChosenButtons();
           userNumbers = [];
           return false;
         }
