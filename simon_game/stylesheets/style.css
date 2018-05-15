@@ -8,17 +8,26 @@
   margin: 10vh 0 6vh 0;
 }
 
-#start-button{
-  border: 1px solid grey;
+#start-button, #reset-button{
+  border: none;
   padding: 10px 16px;
   border-radius: 3px;
+}
+
+#start-button{
+  background: green;
+  color: white;
+}
+
+#reset-button{
+  background: black;
+  color: white;
 }
 
 #circles{
   display: flex;
   justify-content: space-around;
 }
-
 
 .circle{
   width: 50px;
