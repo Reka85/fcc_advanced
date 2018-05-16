@@ -54,19 +54,33 @@ document.addEventListener("DOMContentLoaded", function(){
       if (i >= chosenNumbers.length){
         clearInterval(buttons);
       }
-    },1500)
+
+    },2000)
   }
 
   function showButton(button){
     const b = circles[button];
+    b.classList.add(`${b.id}Clicked`);
     console.log(b.id);
+
+    setTimeout(function(){
+      b.classList.remove(`${b.id}Clicked`);
+
+    },800)
   }
 
   //user has to click on button that has the corresponding index
   function addToUserNumbers(e){
     userNumbers.push(parseInt(e.target.getAttribute("data-index"), 10));
-    console.log(userNumbers)
-    isCorrect(userNumbers, chosenNumbers)
+    console.log(userNumbers);
+    //e.target.classList.add(`${e.target.id}Clicked`);
+    e.target.classList.add(`${e.target.id}Clicked`);
+
+    setTimeout(function(){
+      e.target.classList.remove(`${e.target.id}Clicked`);
+
+    },400)
+    isCorrect(userNumbers, chosenNumbers);
   }
 
   function isCorrect(arr1, arr2){

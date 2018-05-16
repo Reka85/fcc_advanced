@@ -68,7 +68,7 @@
   cursor: pointer;
 }
 
-#red{
+.red{
   border-top: 25px solid rgb(40,40,40);
   border-left: 12.5px solid rgb(40,40,40);
   border-right: 25px solid rgb(40,40,40);
@@ -77,7 +77,7 @@
   background-color: rgb(221, 46, 46);
 }
 
-#green{
+.green{
   border-top: 25px solid rgb(40,40,40);
   border-left: 25px solid rgb(40,40,40);
   border-right: 12.5px solid rgb(40,40,40);
@@ -86,7 +86,7 @@
   background-color: rgb(72, 221, 46);
 }
 
-#blue{
+.blue{
   border-top: 12.5px solid rgb(40,40,40);
   border-left: 12.5px solid rgb(40,40,40);
   border-right: 25px solid rgb(40,40,40);
@@ -95,7 +95,7 @@
   background-color: rgb(54, 113, 209);
 }
 
-#yellow{
+.yellow{
   border-top: 12.5px solid rgb(40,40,40);
   border-left: 25px solid rgb(40,40,40);
   border-right: 12.5px solid rgb(40,40,40);
@@ -103,3 +103,20 @@
   border-bottom-left-radius: 100%;
   background-color: rgb(231, 234, 37);
 }
+
+.redClicked{
+  background: grey;
+}
+
+.greenClicked{
+  background: grey;
+}
+
+.blueClicked{
+  background-color:grey;
+}
+
+.yellowClicked{
+  background: grey;
+}
+
