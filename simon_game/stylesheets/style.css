@@ -2,65 +2,104 @@
   margin-top: 12vh;
 }
 
-#buttons{
+
+#controllers{
+  position: absolute;
+  width: 250px;
+  height: 250px;
+  background: rgb(180,180,180);
+  border-radius: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 79px;
+  top: 205px;
+  border: 20px solid rgb(40,40,40);
+  /*text-align: center;*/
+  display:flex;
+  align-items:center;
+  justify-content: center;
+}
+
+.row {
+  width: 580px;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+}
+/*#buttons{
   display: flex;
   justify-content: space-around;
   margin: 10vh 0 6vh 0;
   align-items: center;
-}
+}*/
 
 #start-button, #reset-button{
   border: none;
   padding: 10px 16px;
-  border-radius: 3px;
+  border-radius: 8px;
   cursor: pointer;
 }
 
 #start-button{
-  background: green;
-  color: white;
+  background: rgb(0, 153, 51);
+  color: rgb(240,240,240);
 }
 
 #reset-button{
-  background: black;
-  color: white;
-}
-
-#circles{
-  display: flex;
-  justify-content: space-around;
+  background: rgb(66, 67, 68);
+  color: rgb(240,240,240);
 }
 
 #choose-strict{
   margin-left: 0.8em;
   position:relative;
-  top: 4px;
+  top: 3px;
 }
 
 #strict-label{
-  position:relative;
-  bottom: 5px;
+  margin-top: 5px;
 }
 
 .circle{
-  width: 50px;
-  height: 50px;
-  border-radius: 25px;
+  width: 250px;
+  height: 250px;
+  /*//border-radius: 25px;*/
   cursor: pointer;
 }
 
 #red{
+  border-top: 25px solid rgb(40,40,40);
+  border-left: 12.5px solid rgb(40,40,40);
+  border-right: 25px solid rgb(40,40,40);
+  border-bottom: 12.5px solid rgb(40,40,40);
+  border-top-right-radius: 100%;
   background-color: rgb(221, 46, 46);
 }
 
 #green{
+  border-top: 25px solid rgb(40,40,40);
+  border-left: 25px solid rgb(40,40,40);
+  border-right: 12.5px solid rgb(40,40,40);
+  border-bottom: 12.5px solid rgb(40,40,40);
+  border-top-left-radius: 100%;
   background-color: rgb(72, 221, 46);
 }
 
 #blue{
+  border-top: 12.5px solid rgb(40,40,40);
+  border-left: 12.5px solid rgb(40,40,40);
+  border-right: 25px solid rgb(40,40,40);
+  border-bottom: 25px solid rgb(40,40,40);
+  border-bottom-right-radius: 100%;
   background-color: rgb(54, 113, 209);
 }
 
 #yellow{
+  border-top: 12.5px solid rgb(40,40,40);
+  border-left: 25px solid rgb(40,40,40);
+  border-right: 12.5px solid rgb(40,40,40);
+  border-bottom: 25px solid rgb(40,40,40);
+  border-bottom-left-radius: 100%;
   background-color: rgb(231, 234, 37);
 }

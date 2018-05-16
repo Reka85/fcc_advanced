@@ -30,9 +30,10 @@ document.addEventListener("DOMContentLoaded", function(){
     circles.map(circle => {
       circle.addEventListener("click", addToUserNumbers);
     });
+    document.getElementById("info").textContent = "Simon game"
     getRandomIndex();
     e.target.removeEventListener("click", startGame, false);
-    e.target.style.background = "grey";
+    e.target.style.background = "rgb(118,118,118)";
   }
 
   //computer chooses a random index
@@ -56,8 +57,9 @@ document.addEventListener("DOMContentLoaded", function(){
     },1500)
   }
 
-  function showButton(field){
-    console.log(field);
+  function showButton(button){
+    const b = circles[button];
+    console.log(b.id);
   }
 
   //user has to click on button that has the corresponding index
@@ -99,7 +101,7 @@ document.addEventListener("DOMContentLoaded", function(){
   }
 
   function handleWin(){
-    console.log("You won!!!!");
+    document.getElementById("info").textContent = "You won!";
     resetGame();
   }
 

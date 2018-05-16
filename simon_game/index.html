@@ -15,23 +15,31 @@
   <body>
     <div class="container text-center">
       <div id="title">
-        <h1>Simon game</h1>
       </div>
-      <div id="buttons">
-        <button id="start-button">Start</button>
-        <button id="reset-button">Reset</button>
-        <form>
-          <div>
-            <label id="strict-label">Strict mode<input type="checkbox" id="choose-strict" value="strict"/></label>
+      <div id="controllers">
+        <div id="controller-items">
+        <h4 id="info">Simon game</h4>
+          <div id="buttons">
+            <button id="start-button">Start</button>
+            <button id="reset-button">Reset</button>
           </div>
-        </form>
-        <p>Count: <span id=count>--</span></p>
+          <form>
+            <div>
+              <label id="strict-label">Strict mode<input type="checkbox" id="choose-strict" value="strict"/></label>
+            </div>
+          </form>
+          <p>Count: <span id=count>--</span></p>
+        </div>
       </div>
       <div id="circles">
-        <div class="circle" data-index="0" id="blue"></div>
-        <div class="circle" data-index="1" id="red"></div>
-        <div class="circle" data-index="2" id="yellow"></div>
-        <div class="circle" data-index="3" id="green"></div>
+        <div class="row">
+          <div class="circle" data-index="0" id="green"></div>
+          <div class="circle" data-index="1" id="red"></div>
+        </div>
+        <div class="row">
+          <div class="circle" data-index="2" id="yellow"></div>
+          <div class="circle" data-index="3" id="blue"></div>
+        </div>
       </div>
     </div>
     <script type="text/javascript" src="scripts/script.js"></script>
