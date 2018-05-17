@@ -2,6 +2,7 @@ document.addEventListener("DOMContentLoaded", function(){
   const arr = [0,1,2,3];
   let chosenNumbers = [];
   let userNumbers = [];
+  const info = document.getElementById("info");
   const circles = Array.from(document.getElementsByClassName("circle"));
 
   // setting up checkbox
@@ -30,7 +31,7 @@ document.addEventListener("DOMContentLoaded", function(){
     circles.map(circle => {
       circle.addEventListener("click", addToUserNumbers);
     });
-    document.getElementById("info").textContent = "Simon game"
+    info.textContent = "Simon game"
     getRandomIndex();
     e.target.removeEventListener("click", startGame, false);
     e.target.style.background = "rgb(118,118,118)";
@@ -88,7 +89,7 @@ document.addEventListener("DOMContentLoaded", function(){
     for(let i = 0; i < arr1.length; i++) {
       if(arr2[i] !== arr1[i]){
         if(strict){
-          console.log("you have to start again");
+          info.textContent = "Start again!";
           resetGame();
           return false;
         } else {
@@ -115,7 +116,7 @@ document.addEventListener("DOMContentLoaded", function(){
   }
 
   function handleWin(){
-    document.getElementById("info").textContent = "You won!";
+    info.textContent = "You won!";
     resetGame();
   }
 

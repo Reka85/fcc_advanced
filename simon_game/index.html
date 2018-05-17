@@ -8,14 +8,13 @@
       <!--jquery-->
       <!--jquery ui-->
       <link rel="stylesheet" href="stylesheets/style.css">
-      <!--google fonts-->
+      <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
       <!--font awesome-->
       <title>Simon Game</title>
   </head>
   <body>
     <div class="container text-center">
-      <div id="title">
-      </div>
+
       <div id="controllers">
         <div id="controller-items">
         <h4 id="info">Simon game</h4>
@@ -31,14 +30,19 @@
           <p>Count: <span id=count>--</span></p>
         </div>
       </div>
+
       <div id="circles">
         <div class="row">
-          <div class="circle green" data-index="0" id="green"></div>
-          <div class="circle red" data-index="1" id="red"></div>
+          <div class="top-circles">
+            <div class="circle green" data-index="0" id="green"></div>
+            <div class="circle red" data-index="1" id="red"></div>
+          </div>
         </div>
         <div class="row">
-          <div class="circle yellow" data-index="2" id="yellow"></div>
-          <div class="circle blue" data-index="3" id="blue"></div>
+          <div class="bottom-circles">
+            <div class="circle yellow" data-index="2" id="yellow"></div>
+            <div class="circle blue" data-index="3" id="blue"></div>
+          </div>
         </div>
       </div>
     </div>
