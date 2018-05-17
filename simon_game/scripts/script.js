@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function(){
-  const arr = [0,1,2,3];
+  const arr = [0,1,2,3]; //a random number will be chosen from it
   let chosenNumbers = [];
   let userNumbers = [];
   const info = document.getElementById("info");
@@ -41,7 +41,6 @@ document.addEventListener("DOMContentLoaded", function(){
   function getRandomIndex(){
     chosenNumbers.push(arr[Math.floor(Math.random() * arr.length)]);
     count.textContent++;
-    console.log(chosenNumbers);
     showChosenButtons();
     return chosenNumbers;
   }
@@ -55,31 +54,25 @@ document.addEventListener("DOMContentLoaded", function(){
       if (i >= chosenNumbers.length){
         clearInterval(buttons);
       }
-
-    },2000)
+    },1500)
   }
 
+  // button flashes
   function showButton(button){
     const b = circles[button];
     b.classList.add(`${b.id}Clicked`);
-    console.log(b.id);
-
     setTimeout(function(){
       b.classList.remove(`${b.id}Clicked`);
-
-    },800)
+    },600)
   }
 
   //user has to click on button that has the corresponding index
   function addToUserNumbers(e){
     userNumbers.push(parseInt(e.target.getAttribute("data-index"), 10));
-    console.log(userNumbers);
-    //e.target.classList.add(`${e.target.id}Clicked`);
     e.target.classList.add(`${e.target.id}Clicked`);
 
     setTimeout(function(){
       e.target.classList.remove(`${e.target.id}Clicked`);
-
     },400)
     isCorrect(userNumbers, chosenNumbers);
   }
@@ -93,8 +86,6 @@ document.addEventListener("DOMContentLoaded", function(){
           resetGame();
           return false;
         } else {
-          console.log("sg wrong"),
-          console.log(`the correct order: ${arr2}`)
           showChosenButtons();
           userNumbers = [];
           return false;
@@ -107,7 +98,6 @@ document.addEventListener("DOMContentLoaded", function(){
         handleWin();
       } else {
         //round finished succcessfully
-        console.log("ok");
         getRandomIndex();
         userNumbers = [];
       }

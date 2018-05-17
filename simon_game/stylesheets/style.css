@@ -29,14 +29,11 @@ body{
   width: 44vw;
 }
 
-
-
 .top-circles, .bottom-circles {
   display: flex;
   margin: 0 auto;
   max-width: 800px;
 }
-
 
 #start-button, #reset-button{
   cursor: pointer;
@@ -83,7 +80,7 @@ body{
 }
 
 .green{
-  background-color: rgb(72, 221, 46);
+  background-color: rgb(60, 170, 60);
   border-top: 25px solid rgb(40,40,40);
   border-right: 12.5px solid rgb(40,40,40);
   border-bottom: 12.5px solid rgb(40,40,40);
@@ -101,7 +98,7 @@ body{
 }
 
 .yellow{
-  background-color: rgb(231, 234, 37);
+  background-color: rgb(206, 194, 37);
   border-top: 12.5px solid rgb(40,40,40);
   border-right: 12.5px solid rgb(40,40,40);
   border-bottom: 25px solid rgb(40,40,40);
@@ -110,19 +107,19 @@ body{
 }
 
 .redClicked{
-  background: grey;
+  background-color: rgb(231, 110, 110);
 }
 
 .greenClicked{
-  background: grey;
+  background-color: rgb(100, 231, 80);
 }
 
 .blueClicked{
-  background-color:grey;
+  background-color: rgb(80, 148, 244);
 }
 
 .yellowClicked{
-  background: grey;
+  background-color: rgb(255, 255, 100);
 }
 
 @media (min-width: 650px){
