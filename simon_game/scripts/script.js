@@ -4,6 +4,13 @@ document.addEventListener("DOMContentLoaded", function(){
   let userNumbers = [];
   const info = document.getElementById("info");
   const circles = Array.from(document.getElementsByClassName("circle"));
+  const rules = document.getElementById("rules");
+  document.getElementById("instructions").addEventListener("click", function(){
+    rules.style.display = "flex";
+  });
+  document.getElementById("close").addEventListener("click", function(){
+    rules.style.display = "none";
+  });
 
   //setting up sound
   const blueClickSound = new Audio('https://s3.amazonaws.com/freecodecamp/simonSound4.mp3');
@@ -123,6 +130,11 @@ document.addEventListener("DOMContentLoaded", function(){
           resetGame();
           return false;
         } else {
+          //if user clicks in incorrect order
+          info.textContent = "Try again!";
+          setTimeout(function(){
+            info.textContent = "Simon game";
+          },1100)
           showChosenButtons();
           userNumbers = [];
           return false;
@@ -131,7 +143,7 @@ document.addEventListener("DOMContentLoaded", function(){
     }
     //if the 2 arrays are of the same length and all their elements are identical
     if (arr1.length === arr2.length){
-      if (arr1.length === 5){// win after 5 turns
+      if (arr1.length === 8){// win after 5 turns
         handleWin();
       } else {
         //round finished succcessfully

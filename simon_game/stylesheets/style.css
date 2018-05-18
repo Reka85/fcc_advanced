@@ -1,4 +1,5 @@
 body{
+  background-color: #B5C8F5;
   font-family: 'Open Sans', sans-serif;
 }
 
@@ -6,10 +7,51 @@ body{
   margin-top: 12vh;
 }
 
-#info{
-  margin-top: 1em;
+/*
+  pop-up window styling
+*/
+#instructions{
+  color: rgb(17,13,202);
+  font-size: 1.3em;
+  position: fixed;
 }
 
+#instructions:hover{
+  cursor: pointer;
+  opacity: 0.5;
+}
+#rules{
+  background: rgba(224,224,224,0.9);
+  border-radius: 10px;
+  display: none;
+  flex-direction: column;
+  font-size: 1.5em;
+  height: 82vh;
+  left: 8vw;
+  margin: 0 auto;
+  padding: 4em 3em;
+  position: absolute;
+  width: 82vw;
+  z-index: 5;
+}
+
+#rules h2{
+  margin-bottom: 1em;
+}
+
+#close{
+  color: rgb(24,24,24);
+  cursor: pointer;
+  font-size: 1.7em;
+  font-weight: bold;
+  position:absolute;
+  right: 1.2em;
+  top: 1.2em;
+}
+
+/*
+  setting up the main parts
+*/
 #controllers{
   align-items: center;
   background: rgb(180,180,180);
@@ -35,17 +77,30 @@ body{
   max-width: 800px;
 }
 
-#start-button, #reset-button, #sound{
+.circle{
   cursor: pointer;
+  height: 37vw;
+  max-height: 250px;
+  max-width: 250px;
+  width: 37vw;
+}
+
+/*
+  setting up contoller buttons
+*/
+#start-button, #reset-button, #sound{
   border: none;
   border-radius: 0.5em;
+  box-shadow: 1px 1px 2px rgba(120,120,120,0.4);
+  cursor: pointer;
   padding: 0.6em 1em;
 }
 
 #sound{
+  background-color: rgba(230,230,230, 0.9);
+  left: 5%;
   position:absolute;
   top: 10%;
-  left: 5%;
 }
 
 #start-button{
@@ -68,14 +123,13 @@ body{
   margin-top: 5px;
 }
 
-.circle{
-  cursor: pointer;
-  height: 37vw;
-  max-height: 250px;
-  max-width: 250px;
-  width: 37vw;
+#info{
+  margin-top: 1em;
 }
 
+/*
+  button color and shape settings
+*/
 .red{
   background-color: rgb(221, 46, 46);
   border-top: 25px solid rgb(40,40,40);
@@ -128,6 +182,9 @@ body{
   background-color: rgb(255, 255, 100);
 }
 
+/*
+  media queries
+*/
 @media (min-width: 650px){
   #controllers{
     margin-top:120px;
@@ -165,7 +222,26 @@ body{
 
   #controllers{
     border: 0.6em solid rgb(40,40,40);
+  }
 
+  #rules{
+    width: 100%;
+    left: 0;
+    height: 100vh;
+    top:0;
+  }
+
+  #rules h2{
+    margin-bottom: 0.5em;
+  }
+
+  #close{
+    right: 0.8em;
+    top: 0.8em;
+  }
+
+  #sound{
+    top: 5%;
   }
 }
 

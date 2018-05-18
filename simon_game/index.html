@@ -7,9 +7,19 @@
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
       <link rel="stylesheet" href="stylesheets/style.css">
       <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+      <script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js" integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+" crossorigin="anonymous"></script>
       <title>Simon Game</title>
   </head>
   <body>
+    <div id="rules">
+      <h2 class="text-center">Simon game rules</h2>
+      <p>1) Click start</p>
+      <p>2) Click the buttons in the right order</p>
+      <p>3) If the order is not right, the computer repeats the correct order</p>
+      <p>4) In strict mode, if the order is wrong, the game restarts</p>
+      <p>5) You win, if you complete 8 rounds</p>
+      <p id="close"><i class="far fa-times-circle"></i></p>
+    </div>
     <div class="container text-center">
       <button id="sound">Sound off</button>
       <div id="controllers">
@@ -42,6 +52,7 @@
           </div>
         </div>
       </div>
+      <p id="instructions">Game instructions</p>
     </div>
     <script type="text/javascript" src="scripts/script.js"></script>
   </body>
