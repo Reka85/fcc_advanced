@@ -5,6 +5,20 @@ document.addEventListener("DOMContentLoaded", function(){
   const info = document.getElementById("info");
   const circles = Array.from(document.getElementsByClassName("circle"));
 
+  //setting up sound
+  const blueClickSound = new Audio('https://s3.amazonaws.com/freecodecamp/simonSound4.mp3');
+  const greenClickSound = new Audio('https://s3.amazonaws.com/freecodecamp/simonSound1.mp3');
+  const redClickSound = new Audio('https://s3.amazonaws.com/freecodecamp/simonSound2.mp3');
+  const yellowClickSound = new Audio('https://s3.amazonaws.com/freecodecamp/simonSound3.mp3');
+
+  let soundOn = true;
+  const soundToggle = document.getElementById("sound");
+  soundToggle.addEventListener("click", function(e){
+    soundOn = !soundOn;
+    e.target.textContent = e.target.textContent === "Sound on" ? "Sound off" : "Sound on";
+  });
+
+
   // setting up checkbox
   const checkbox = document.getElementById("choose-strict");
 
@@ -54,25 +68,48 @@ document.addEventListener("DOMContentLoaded", function(){
       if (i >= chosenNumbers.length){
         clearInterval(buttons);
       }
-    },1500)
+    },1200)
   }
 
   // button flashes
   function showButton(button){
     const b = circles[button];
     b.classList.add(`${b.id}Clicked`);
+    if (soundOn) playSound(b.id);
     setTimeout(function(){
       b.classList.remove(`${b.id}Clicked`);
     },600)
   }
 
+  //sound played when button flashes
+  function playSound(color){
+    switch (color){
+      case "red":
+        redClickSound.play();
+        break;
+      case "blue":
+        blueClickSound.play();
+        break;
+      case "yellow":
+        yellowClickSound.play();
+        break;
+      case "green":
+        greenClickSound.play();
+        break;
+      default:
+        console.log("Sound could not be found for the button");
+        break;
+    }
+  }
+
   //user has to click on button that has the corresponding index
   function addToUserNumbers(e){
-    userNumbers.push(parseInt(e.target.getAttribute("data-index"), 10));
-    e.target.classList.add(`${e.target.id}Clicked`);
-
+    const clickedButton = e.target
+    userNumbers.push(parseInt(clickedButton.getAttribute("data-index"), 10));
+    clickedButton.classList.add(`${clickedButton.id}Clicked`);
+    if (soundOn) playSound(clickedButton.id);
     setTimeout(function(){
-      e.target.classList.remove(`${e.target.id}Clicked`);
+      clickedButton.classList.remove(`${clickedButton.id}Clicked`);
     },400)
     isCorrect(userNumbers, chosenNumbers);
   }
